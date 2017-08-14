@@ -1,0 +1,292 @@
+
+			Alotware Operating System
+
+7  September 2014 Sunday:	I am starting a new project, Alotware today at 7 September 2014 08:04 PM.
+
+24 September 2014 Wednesday:	Finished the boot loader.
+
+25 September 2014 Thursday:	Started writing the OS Kernel.
+
+28 September 2014 Sunday:	Wrote keyboard driver.
+				Now I have a 32-bit OS with IDT, GDT, Keyboard support and PIC Timer.
+				Also, my OS can print strings and integers in decimal, hexadecimal and binary.
+
+29 September 2014 Monday:	Fixed a major keyboard driver bug (Improper behavior in QEMU and other slow emulators).
+				Fixed a major boot loader bug (error on loading the last sector).
+				598 Kernel LOC.
+
+30 September 2014 Tuesday:	Added the text-mode cursor support.
+				New function initKeyboard to Set LEDs off, Set delay and repeat rate and install IRQ handler.
+				662 Kernel LOC.
+				
+1 October 2014 Wednesday:	Implemented a basic CLI.
+				New functions: stringCompare, stringUpperCase, stringLowerCase, stringTrim, stringLength.
+				1118 Kernel LOC.
+
+2 October 2014 Thursday:	Implemented the scroll down.
+				1118+-10 Kernel LOC.
+
+7 October 2014 Tuesday:		Now the OS is able to switch back and forth to 16 and 32 bit modes.
+				New functions int10h and int13h (in protected mode).
+				VESA support (command GUI).
+				1458 Kernel LOC.
+
+9 October 2014 Thursday:	New function filesList to get the list of files.
+				New command list (dir).
+				Improvement in the printString (scroll down and return char).
+				Improvement in the printInt* (move cursor).
+				1900 Kernel LOC.
+
+11 October 2014 Saturday:	Now the OS is able to load programs with command-line at 0x9000.	
+				2150 Kernel LOC.
+
+12 October 2014 Sunday:		A Basic (and documented) API.
+				Changed the program load location to 0xaf00 (due to the int13h problems).
+				New command help.
+				Improvements in the printString and setCursor (fix X and Y).
+				2343 Kernel LOC.
+
+14 October 2014 Tuesday:	Improvement in the printString (windows (13,10), unix lines(10) and (stub) tab support).
+				Improvement in the int13h (Fixed full 64k file access, used ES instead of only BX).
+				2367 Kernel LOC.
+
+16 October 2014 Thursday:	Improvement in int13h (can load the files > 64k, can load the files at the high address).
+				Again changed the programs location to 0x100000 (because now I can load files at the high addresses).
+				2412 Kernel LOC.
+
+23 October 2014 Thursday:	Now OS will only loads files with .bin extension.
+				Stub file save function.
+				2507 Kernel LOC.
+
+24 October 2014 Friday:		Ported the shell as an application.
+				New function/system call loadProgram to load the program with its name and execute it.
+				2197 Kernel LOC.
+
+25 October 2014 Saturday:	Now the OS can load multiple applications but execute one.
+				Now the OS can terminate any application with escape key.
+				Elementary support for TSR (terminate and stay resident).
+				New functions/system calls memoryAllocate, memoryDeallocate, installISR, terminate.
+				Implemented changeable timer frequency.
+				2426 Kernel LOC.
+
+26 October 2014 Sunday:		Major improvement and bug fixes in the kernel (TSR and loadProgram).	
+				Now the OS can track video mode and number of the loaded programs.
+				New function/system call stringToInt.
+				New function/system call fileExists.
+				2750 Kernel LOC.
+
+27 October 2014 Monday:		New application calculator.
+				2750 Kernel LOC.
+
+11 November 2014 Tuesday:	Implemented the graphicsPutPixel function.
+				Many improvements in the setGraphicsMode(setVideoMode) function.
+				New global variables resolution.X, resolution.Y, bytes and bits per pixel and LFB address.
+				2934 Kernel LOC.
+
+15 November 2014 Saturday:	Implemented the basic mouse support.
+				New functions initMouse and waitMouse.
+				3152 Kernel LOC.
+
+16 November 2014 Sunday:	New function graphicsDrawRect.
+				First time tried out implementing mouse cursor on Alotware.
+				3213 Kernel LOC.
+
+19 November 2014 Wednesday:	Started implementing Synaptics touchpad support.
+				New function initSynaptics.
+				New IRQ handler for synaptics touchpad.
+				3813 Kernel LOC.
+
+13 December 2014 Saturday:	Dropped the FAT12 support.
+				Added the FAT16 support.
+				Dropped the floppy disks support.
+				Added the Hard disks support.
+				New master boot record (mbr.asm).
+				New FAT16 boot sector.
+				FAT16 stub functions.
+				2925 Kernel LOC.
+
+15 December 2014 Monday:	Fixed a major stack bug in the boot sector.
+				2925 Kernel LOC.
+
+16 December 2014 Tuesday:	Rewrote the fileExists for FAT16.
+				Rewrote the fileLoad for FAT16.
+				3146 Kernel LOC.
+
+17 December 2014 Wednesday:	Fixed a major stack bug in go16.
+				3146 Kernel LOC.
+
+19 December 2014 Friday:	Rewrote the filesList for FAT16.
+				3291 Kernel LOC.
+				
+22 December 2014 Monday:	Rewrote the function fileNew to create empty file.
+				Rewrote the function fileSave (limited to one cluster).
+				Added the header to each file.
+				3709 Kernel LOC.
+			
+23 December 2014 Tuesday:	Improvement in the fileSave (more than one clusters).
+				3779 Kernel LOC.
+				
+25 December 2014 Thursday:	Major improvement in whole OS for handling screen.
+				Rewrote the command-line shell.
+				Rewrote the calculator application.
+				Implemented a universal text mode cursor in the OS.
+				Rewrote the printString and printInt*.
+				New function putChar.
+				New function getString.
+				3754 Kernel LOC.
+				
+26 December 2014 Friday:	New function stringWordsCompare.	
+				New CLI command 'display' to display the contents of a file.
+				Started working on a text editor.
+				Improvements in fileSave (can save files located at higher addresses).
+				Improvements in fileLoad (used DS instead of ES in edi).
+				Used stringWordsCompare instead of stringCompare in CLI.
+				3825 Kernel LOC.
+				
+27 December 2014 Friday:	New function fileDelete.
+				New function getCursor.
+				New CLI command 'delete' to delete a file.
+				3912 Kernel LOC.
+				
+30 December 2014 Tuesday:	New macro 'os' for system calls.
+				Bug fixes in the API interrupt.
+				3914 Kernel LOC.
+				
+31 December 2014 Wednesday:	New function stringInsertChar.
+				New function stringRemoveChar.
+				0x500 segment improvements in many functions.
+				4060 Kernel LOC.
+				
+1 January 2015 Thursday:	Wrote a basic text editor (editor.bin).
+				ES segment bug fixes in irq0 program terminate.
+				4063 Kernel LOC.
+
+2 January 2015 Friday:		Many improvements in the text editor.
+				Bug fixes in stringInsertChar.
+				4065 Kernel LOC.
+				
+3 January 2015 Saturday:	Added support for filenames without extension.
+				Added colors to the API.
+				New functions textMode.set/getColor.
+				4186 Kernel LOC.
+				
+4 January 2015 Sunday:		Lots of improvements in the text editor.
+				Fixed a bug in fileNameToFATFileName.
+				4184 Kernel LOC.
+				
+5 January 2015 Monday:		Added support for the program's arguments.
+				Improvements in the text editor (page down & file load/save).
+				New optimized version of putChar (putCharO).
+				4275 Kernel LOC.
+s
+6 January 2015 Tuesday:		Now the CLI can load the programs without extension.
+				Rewrote the function getString.
+				4348 Kernel LOC.
+				
+7 January 2015 Wednesday:	Switched from the NASM to FASM assembler.
+				4348 Kernel LOC.			
+
+11 January 2015 Sunday:		Became partial self-hosting.
+				Ported FASM (still in progress).
+				Compiled Alotware under Alotware.
+				Compiled FASM under Alotware.
+				4348 Kernel LOC.
+
+12 January 2015 Monday:		Fixed a bug in putChar and putCharO.
+				Changed the directory structure slightly.
+				4338 Kernel LOC.
+				
+13 January 2015 Tuesday:	Improvements in FASM port (support for output name).
+				4338 Kernel LOC.
+				
+18 January 2015 Sunday:		Changed the file name "KERNEL.BIN" to the "ALOTWARE.OS"
+				Improvements in the API (used table instead of comparing).
+				Improvements in the string functions and the input functions.
+				4333 Kernel LOC.
+				
+19 January 2015 Monday:		Many improvements and bug fixes in the cpumodes.inc
+				Bug fixes in the stringCompare and stringWordsCompare.
+				4116 Kernel LOC.
+				
+26 January 2015 Monday:		Changed the disk size to be used with the Bochs.
+				Added the license header to the each file.
+				Improvements in the master boot record (mbr.asm).
+				4153 Kernel LOC.
+				
+27 January 2015 Tuesday:	Added the frequently asked questions (faqs.txt) in the docs.
+				Added the project goals (goals.txt) in the docs.
+				4153 Kernel LOC.
+
+4 February 2015 Wednesday:	Improvements in the int13h (better error handling)
+				Improvements in the read/writeSectorBIOS.
+				4164 Kernel LOC.
+				
+5 February 2015 Thursday:	A new goal accomplished.
+				Graphics mode fonts support.
+				Lots of improvements in all the video.inc functions.
+				Graphical changes in the cli.bin and editor.bin.
+				New function graphics.putBitmapChar.
+				Bug fixes in the disk functions (11-char file name).
+				4549 Kernel LOC.
+				
+6 February 2015 Friday:		Bug fixes and improvements in the graphicsPutPixel.
+				800x600, 1024x768, text mode support.
+				4608 Kernel LOC.
+				
+7 February 2015 Saturday:	Created a website for Alotware (http://alotware.hol.es).
+				4608 Kernel LOC.
+				
+8 February 2015 Sunday:		Added the scan code array in the keyboard handler.
+				(Performance) optimizations in the font drawing function.
+				Optimizations in putPixel function.
+				New line bug fix in putChar.
+				Added colors in the graphics mode text.
+				Added flexibility in scrollDown.
+				4554 Kernel LOC.
+				
+9 February 2015 Monday:		Added flexibility in clearScreen.
+				Added flexibility in clearLine.
+				Added the graphics double buffering support.
+				Bug fixes and improvements in keyboard functions.
+				4688 Kernel LOC.
+				
+10 February 2015 Tuesday:	SSE support for optimization in the graphics function.
+				Improvements in printInt* for signed integers.
+				4762 Kernel LOC.
+				
+14 February 2015 Saturday:	Improvements in the CLI (in the 'gui' command).
+				Improvements and bug fixes in the double buffering functions.
+				Bug fix in go16 ('cli' before loading the IDT).
+				4768 Kernel LOC.
+				
+22 February 2015 Sunday:	Merged FASM into a single file.
+				Improvements in the build script.
+				4777 Kernel LOC.				
+				
+23 March 2015 Monday:		Improvements in the font.
+				4777 Kernel LOC.
+				
+29 March 2015 Sunday:		Added the control key support in the keyboard handler and in the text editor.
+				New function getKeysStatus.
+				Changed text editor shortcuts (F2 to ^S and Esc to ^Q).
+				4827 Kernel LOC.
+				
+13 April 2015 Tuesday:		Fixed the many documentation, grammar, and the spelling errors.
+				4827 Kernel LOC.
+				
+29 April 2015 Wednesday:	Included websites in the project folder.
+				4827 Kernel LOC.
+				
+07 June 2015 Sunday:		Created random number functions; rand and srand.
+				4865 Kernel LOC.
+				
+09 June 2015 Tuesday:		Wrote 2048 game clone.
+				4865 Kernel LOC.
+				
+23 June 2015 Friday:		Some improvements in mouse functions.
+				New functions mouseGet and mouseSet.
+				4906 Kernel LOC.
+
+31 January 2016 Sunday:		Added reboot function.
+				Bug fixes in stringWrodsCompare.
+				4932 Kernel LOC.

@@ -1,0 +1,11 @@
+
+			Alotware Operating System
+
+Directory Layout:
+
+alotware/
+	docs/		Documentation.
+	apps/		Applications binaries and source codes.
+	os/		Kernel binaries and source code.
+		boot/	Boot sector and master boot record.
+	website/	The website of Alotware (alotware.hol.es).

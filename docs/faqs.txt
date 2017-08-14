@@ -1,0 +1,43 @@
+
+			Alotware Operating System
+
+Q: What is Alotware?
+A: Alotware is a 32-bit hobbyist operating system.  It is written in x86 assembly for a
+   PC.  It is self-hosting as well as in public domain.
+
+Q: What does the name the "Alot" in "Alotware" stand for?
+A: "A lab of time."
+
+Q: Why does the world need another OS?
+A: It is not an attempt to change the world, as there is no need of another
+   operating system.  I know my limitations.
+ 
+Q: Is it based on Linux (or any other OS)?
+A: No, Alotware has been written from scratch.
+
+Q: Why did you choose an assembly language?
+A: I don't want GNU to decide the fate of my project.  [Sarcasm]
+
+Q: How does Alotware access disks?
+A: By switching to real mode.  It is not a good approach but I do not
+   have a good option, either.
+
+Q: What does "self-hosting" mean?
+A: Self-hosting means that we don't need another operating system for further
+   development.
+   
+Q: What does "public domain" mean?
+A: It means that it is a free and open-source software and there are no
+   restriction on doing any thing.  (As stated in license.txt.)
+
+Q: I have a problem with Alotware.  What do I do?
+A: Please report the problems and bugs to muazzam_ali@live.com.
+
+Q: How do I contribute?
+A: Alotware is a one-man project.  It is exclusively written by me as I
+   have challenged myself to do so.  Still you can contribute by sending me
+   the suggestions and/or code snippets.  (I will also include your name in 
+   the credits section.)  You can also contribute by developing the applications.
+   
+Q: Where do you receive donations?
+A: /dev/null or the black hole nearest to you.

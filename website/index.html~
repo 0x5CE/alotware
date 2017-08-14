@@ -1,0 +1,253 @@
+<!doctype html>
+<html>
+	<head>
+		<title>
+			Alotware | Public Domain, Self-hosting Operating System
+		</title>
+		<meta name=viewport content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Jura"/>
+		<style type="text/css">
+			* {
+				font-family: Jura, "sans-serif", Arial;
+				padding: 0px 0px 0px 0px;
+				width: 85%;
+				margin-left: auto;
+				margin-right: auto;
+				color: #505050;
+				background: #fefefe;
+			  }
+			h1 {
+				color: #333333;
+				font-weight: normal;
+			}
+			h2 {
+				color: #333333;
+				font-weight: normal;
+			}
+			h3 {
+				font-weight: normal;
+			}
+			b {
+				font-weight:bold;
+			}
+		
+			.nostyle{
+				list-style: none;	
+			}
+			ul{
+				list-style: square;
+			}
+			
+			#manu{
+				margin-top: -10px;
+				margin-left: -30px;
+				background: #fefefe;
+				position: fixed;
+				text-align: left;	
+				z-index: 10;
+				border-bottom-style: solid;
+				border-width: 2px;
+				border-color: silver;
+				width:80%;
+			}
+			#manu ul{
+				list-style-type: none;
+			}
+
+			a{
+				text-decoration: none;
+				color: blue;
+			}
+			
+			#manu ul li a {
+				text-decoration: none;
+				color: gray;
+				padding-left: 10px;
+				margin-left: auto;
+			}
+			#manu ul li{
+				display: inline;
+			}
+			
+			img {
+				border-style: solid;
+				border-width: thin;
+				border-color: #f0f0f0;
+			}
+			#screenshots{
+				margin-left: 0px;
+				margin-right: 0px;
+			}
+			#pading{
+				padding-top: 70px;
+			}
+			
+		</style>
+	</head>
+	
+	<body>
+
+		<div id="manu">
+		<ul>
+			<li> <a href="#"> Home </a> </li>
+			<li> <a href="#downloads"> Downloads </a> </li>
+			<li> <a href="#screenshots"> Screenshots </a> </li>
+			<li> <a href="#faq"> FAQs </a> </li>
+			<li> <a href="#credits"> Credits </a> </li>
+			<li> <a href="#contact"> Contact </a>
+			<li> <a href="#aboutme"> About me </a> </li>
+		</ul>
+		</div>
+		
+		<div id="pading"></div>
+		
+		<div style="">
+		<h1 style="margin: 0px 0px 0px 0px;">Alotware OS</h1>
+		</div>
+		
+		<p><h2>Introduction</h2></p>
+		<p>
+			Alotware is a simple 32-bit self-hosting operating system that is
+			written entirely in an assembly language.
+			It is a mono-tasking operating system but more than
+			one applications can be loaded.  However, one application
+			executes at a time.	
+		Please note that the project is still in early stages.
+		</p>
+
+		<p><h2>Features</h2></p>
+		<p>
+		
+			<ul>
+	<li>
+	well commented code
+	</li>
+	<li>
+	text editor
+	</li>
+	<li>
+	FASM assembler port
+	</li>
+	<li>
+	2048-like game
+	</li>
+	<li>
+	BIOS disk-access
+	</li>
+	<li>
+	FAT16 read/write
+	</li>
+	<li>
+	VESA and mouse support
+	</li>
+	<li>
+	graphics mode fonts
+	</li>
+	<li>
+	API with more than 40 system call
+	</li>
+	<li>
+	and more in near future
+	</li>
+			</ul>
+		</p>	
+		</p>
+	
+	<p id="downloads"><h2>Downloads</h2></p>
+		<p>
+			This download contains the source code, disk images, build scripts and the documentation.
+			Please note that Alotware hasn't been <b> released, yet. </b>
+			This is just a demo and may not be stable.
+			<a href="alotware.zip">Download</a> (~619 KiB).			
+	<p><em>NOTE: It'll be updated without any further notice.</em></p>
+		</p>
+	
+	<p id="screenshots"><h2>Screenshots</h2></p>
+
+	<div style="align-left: 0px; align-right: 0px; font-size: 12px;">Click on the image to view it in full size.</div>
+
+	<p><h3>Running text editor:</h3></p>
+
+	<a href="editor.png"> <p><img src="editor.png"></img></p></a>
+	<p>
+		
+	<p><h3>Assembling itself:</h3></p>
+
+	<a href="selfhost.png"> <p><img src="selfhost.png"></img></p></a>
+	<p>
+		
+      <p><h3>2048-like game:</h3></p>
+
+	<a href="game2048.png"> <p><img src="game2048.png"></img></p></a>
+	<p>
+
+	<p>
+		
+		<h2 id="faq">Frequently Asked Questions</h2></p>
+		<p>
+			<p><b> Q: What is Alotware?</p></b>
+<p><b> A: </b> Alotware is a 32-bit hobbyist operating system.  It is written in x86 assembly for a</p></b>
+<p>   PC.  It is self-hosting as well as in public domain.</p>
+<p></p></b>
+<p><b> Q: What does name the "Alot" in "Alotware" stand for?</p></b>
+<p><b> A: </b> "A lab of time."</p>
+<p></p></b>
+<p><b> Q: Why does the world need another OS?</p></b>
+<p><b> A: </b> It is not an attempt to change the world, I know my </p>
+<p>   limitations.</p></b>
+<p> </p></b>
+<p><b> Q: Is it based on Linux (or any other OS)?</p></b>
+<p><b> A: </b> No, Alotware has been written from scratch.</p>
+<p></p></b>
+<p><b> Q: Why did you choose an assembly language?</p></b>
+<p><b> A: </b>  I don't want GNU to decide the fate of my project.  [Sarcasm]</p>
+<p></p></b>
+<p><b> Q: How does Alotware access disks?</p></b>
+<p><b> A: </b> By switching to the real mode.  It is not a good approach but I don't</p>
+<p>   have a good option, either.</p></b>
+<p></p></b>
+<p><b> Q: What does "self-hosting" mean?</p></b>
+<p><b> A: </b> Self-hosting means that we don't need another operating system for further</p>
+<p>   development.</p></b>
+<p>   </p></b>
+<p><b> Q: What does "public domain" mean?</p></b>
+<p><b> A: </b> It means that it is a free and open-source software and there are no</p>
+<p>   restrictions on doing any thing. (As stated in <em>license.txt</em>)</p>
+<p></p></b>
+<p><b> Q: This website has a poor design.</p></b>
+<p><b> A: </b> I am not a web developer or designer. </p>
+<p></p></b>
+<p><b> Q: I have a problem with Alotware.  What do I do?</p></b>
+<p><b> A: </b> Please report the problems and bugs to muazzam_ali@live.com.</p>
+<p></p></b>
+<p><b> Q: How do I contribute?</p></b>
+<p><b> A: </b> Alotware is a one-man project.  It is exclusively written by myself as I</p>
+<p>   challenged myself to do so.  Still you can contribute by sending me</p></b>
+<p>   the suggestions and/or code snippets. (I will also include your name in </p></b>
+<p>   the credits section.)  You can also contribute by developing the applications.</p></b>
+<p>   </p></b>
+<p><b> Q: Where do you receive donations?</p></b>
+<p><b> A: </b> /dev/null or the black hole nearest to you.</p>
+		</p>
+	
+	<p id="credits"><h2>Credits</h2>
+		<h3>Project admin and development</h3>
+			<ul class="nostyle">
+		<li>Muazzam Ali Kazmi
+			</li>
+			</ul>
+	</p>
+
+	<p id="contact"><h2>Contact</h2>
+	<ul class="nostyle">
+		<li><a href="mailto:muazzam_ali@live.com">Email</a></li>
+		<li><a href="http://www.facebook.com/muazzamalikazmi5">Facebook</a></li>
+	</ul>
+	</p>
+
+	<p id="aboutme"><h2>About Me</h2></p>
+<p>
+	My name is Muazzam Ali Kazmi and I'm an 11th grader and a hobbyist programmer (obviously?).  I live in Shahpur, Layyah, Pakistan.  I'm a materialistic and religious Muslim.  Culturally, I'm Saraiki and Shia.  I'm interested
+	in many things ranging from Palestine to physics to programming.  I'm currently obsessed with politics, (scientific) books, schizophrenic people, and listening to Nadeem Sarwar.  Thanks a lot for your interest! </p>
+	</body>
+</html>

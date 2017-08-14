@@ -1,0 +1,11 @@
+megs: 32
+
+ata0-master: type=disk, path="alotware.img", mode=flat, cylinders=73, heads=16, spt=63
+boot: disk
+
+log: /dev/null
+
+mouse: enabled=0, toggle=ctrl+alt
+
+
+display_library: sdl
