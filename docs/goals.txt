@@ -1,0 +1,68 @@
+
+		Alotware Operating System
+
+-----------------------------------------------------------
+
+Goals for the version 1.0:
+
+Statistics:
+	Total goals	= 35
+	Accomplished	= 7
+	About 20% completed. (Version 0.2.0)
+
+Estimation:
+	Will be completed, insha'Allah, by 2017-2018.
+
+-----------------------------------------------------------
+
+0. Basic kernel
+	0.0: Very basic with apps	-Done
+	0.1: Memory management
+		0.1.0: Physical memory
+		0.1.1: Virtual memory
+	0.2: Kernel modules
+	0.3: Drivers layer
+	0.4: User mode
+	0.5: Multitasking
+    		0.5.0: Basic
+    		0.5.1: IPC
+  
+1. Files
+	1.0: Basic files I/O		-Done (FAT16 with hard disks)
+	1.1: Directories support
+	1.2: Virtual file system
+  
+2. Text editor
+	2.0: Basic text editor		-Done (written)
+	2.1: Proper TAB support
+	2.2: Not limited chars in lines
+	2.3: Selection support
+	2.4: Undo / redo support
+	2.5: Find / replace
+	2.6: Mouse support
+
+3. Assembler				-Done (ported FASM)
+
+4. GUI
+	4.0: Graphics drivers		-Done (with VESA)
+	4.1: Drawing fonts		-Done
+	4.2: Mouse support		-Done (PS/2 mouse)
+	4.3: Basic GUI
+	4.4: Events support
+	4.5: GUI API
+  
+5. Networking
+	5.0: Sockets
+	5.1: Basic ethernet driver
+	5.2: TCP/IP stack
+	5.3: HTTPS, HTTP, FTP support
+	5.4: Basic web browser
+	5.5: Basic file downloader
+	5.6: Basic web server
+	5.7: Basic email client
+	
+-----------------------------------------------------------
+
+Goals for the version n:
+
+0. To be decided after the completion of the version n - 1.
